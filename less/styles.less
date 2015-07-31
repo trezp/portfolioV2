@@ -1,0 +1,187 @@
+
+@import "bootstrap-less/mixins.less";
+@import "bootstrap-less/bootstrap.less";
+@import "bootstrap-less/variables.less";
+@import "bootstrap-less/grid.less";
+
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+main {
+	background-color: @gray-lighter;
+}
+
+p {
+	line-height: 2; 
+}
+
+.btn {
+	font-family: @font-secondary;
+	color: @white;
+	letter-spacing: 3px;
+	width: 100%;
+	padding: 10px 20px;
+	border: solid 1px @white;
+	letter-spacing: 3px;
+	max-width: 250px;
+	margin: 10px;
+	.uppercase;
+
+	&:hover {
+		background: @black;
+		border: solid 1px @black;
+		color: @white;
+	}
+}
+
+.pageone {
+	background-image: url("../images/bookstackwide.jpg");
+	background-size: cover; 
+	background-repeat: no-repeat;
+	position: relative;
+	background-position: center center;
+	height: 100vh;
+}
+.header-row {
+
+	.title-block {
+		
+		padding: 100px 25px 45px 15px;
+
+		h1 {
+			font-family: "Open Sans Condensed", san-serif;
+			color: @brand-primary;
+			margin: 0;
+			font-weight: 900;
+			font-size: 50px;
+			letter-spacing: 7px;
+
+			span {
+				font-weight: 300;
+			}
+		}
+
+		h3 {
+			color: @gray-dark;
+			letter-spacing: 2px;
+			display: inline-block;
+			position: relative; 
+			z-index: 1;
+			padding-left: 5px; 
+			span {
+				padding-bottom: 10px;
+			}
+		}
+	}
+
+	.nav-block ul {
+			list-style: none;
+			padding-left: 0;
+			font-family: @font-secondary;
+			li {
+				.make-sm-column(2);
+
+				a {
+					
+					color: @gray-dark;
+					width: 100%;
+					padding: 10px 20px;
+					border: solid 2px @gray-dark;
+					letter-spacing: 3px;
+
+					&:hover {
+						background: @brand-primary;
+						border: solid 2px @brand-primary;
+						color: @white;
+					}
+				}
+			}
+		}
+}
+	
+.about-contain-fluid {
+	background-color: @gray-lighter;
+	color: @black; 
+ 
+	.about-container {
+
+		.left {
+			.make-sm-column(4);
+			padding: 60px 0;
+
+			img {
+				.img-responsive; 
+				border-radius: 100%;
+				max-height: 200px;
+				.center-block;
+			}
+		}
+
+		.right {
+			padding: 30px 0;
+			.make-sm-column(8);
+			
+			h3 {
+				.uppercase;
+				padding-top: 30px;
+				font-weight: 200;
+			}
+
+			p {
+				font-size: 16px;
+				line-height: 2;
+			}
+		} 
+		
+	}
+}
+
+.work-samples {
+	.uppercase; 
+	text-align: center;
+	padding: 30px 0;
+	font-weight: 200;
+	background: @gray-dark;
+} 
+
+.project-contain-fluid {
+	background-color: darken(@brand-primary, 10%);;
+	color: @gray-lighter;
+	padding: 30px 0;
+	
+	.project-column {
+		.make-sm-column(6);
+
+		img {
+			.center-block;
+			.img-responsive;
+		}
+	}
+		 
+}
+
+.projects-block {
+	h3 {
+		font-weight: 200;
+		.uppercase;
+	}
+}
+	
+.project2 {
+	background-color: @gray-lighter;
+	color: @gray-dark;
+	padding: 60px 0;
+}
+
+.project3 {
+	padding: 60px 0;
+}
+
+.project4 {
+	background-color: @gray-lighter;
+	color: @gray-dark;
+	padding: 60px 0;
+}
+
+
