@@ -16,7 +16,7 @@ p {
 	line-height: 2; 
 }
 
-.btn {
+.btn {  
 	font-family: @font-secondary;
 	color: @white;
 	letter-spacing: 3px;
@@ -84,11 +84,12 @@ p {
 
 				a {
 					
-					color: @gray-dark;
+					color: @gray-lighter;
 					width: 100%;
 					padding: 10px 20px;
-					border: solid 2px @gray-dark;
+					border: solid 1px @white;
 					letter-spacing: 3px;
+					font-weight: 200;
 
 					&:hover {
 						background: @brand-primary;
@@ -124,6 +125,7 @@ p {
 			
 			h3 {
 				.uppercase;
+				color: @brand-primary;
 				padding-top: 30px;
 				font-weight: 200;
 			}
@@ -140,7 +142,7 @@ p {
 .work-samples {
 	.uppercase; 
 	text-align: center;
-	padding: 30px 0;
+	padding: 600px 0;
 	font-weight: 200;
 	background: @gray-dark;
 } 
@@ -152,6 +154,7 @@ p {
 	
 	.project-column {
 		.make-sm-column(6);
+		padding: 60px 0;
 
 		img {
 			.center-block;
