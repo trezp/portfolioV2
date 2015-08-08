@@ -11,13 +11,19 @@ body {
 main {
 	background-color: @gray-lighter;
 }
-
+//common styles
 .vertical-center {
   min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
   min-height: 100vh; /* These two lines are counted as one :-)       */
 
   display: flex;
   align-items: center;
+}
+h2 {
+	color: @gray-dark;
+	.uppercase;
+	padding-top: @grid-gutter-width*2;
+	font-weight: 200; 
 }
 
 p {
@@ -226,21 +232,19 @@ p {
 }
 
 .project-summary-row {
-	
-	h2 {
+	p {
 		color: @gray-dark;
-		.uppercase;
-		padding-top: @grid-gutter-width*2;
-		font-weight: 200;
 	}
 	.project-column {
 		.make-sm-column(3);
 		padding-top: @grid-gutter-width;
 		padding-bottom: @grid-gutter-width*3;
+		text-align: center;
 		img {
 			.img-responsive;
+			padding-bottom: 10px;
 		}
-
+		
 	}
 }
 
@@ -250,6 +254,10 @@ p {
 	color: @gray-lighter;
 	padding: 30px 0;
 	
+	h2 {
+		color: @gray-lighter;
+		padding-top: 0;
+	}
 	.project-column {
 		.make-sm-column(6);
 		padding-top: 60px;
