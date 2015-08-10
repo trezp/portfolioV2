@@ -48,6 +48,19 @@ p {
 		border: solid 1px @black;
 		color: @white;
 	}
+
+	&.resume-button {
+		.center-block;
+		color: @gray-dark;
+		border-color: @gray-dark;
+		margin: @grid-gutter-width auto;
+
+		&:hover {
+			background: @brand-primary;
+			border: @brand-primary;
+			color: @gray-lighter;
+		}
+	}
 }
 
 .btn-dark {
@@ -82,7 +95,7 @@ p {
 	}
 	.title-block {
 		text-align: center;
-
+		
 		h1 {
 			font-family: "Open Sans Condensed", san-serif;
 			color: @brand-primary;
@@ -93,6 +106,10 @@ p {
 
 			span {
 				font-weight: 300;
+			}
+
+			@media (max-width: @screen-xs-max) {
+				padding-top: @grid-gutter-width;
 			}
 		}
 
@@ -116,9 +133,14 @@ p {
 		text-align: center;
 		padding-left: 0;
 
+		@media (max-width: @screen-xs-max) {
+			margin: 0;
+		}
+
 		li {
 			padding-left: 25px;
 			padding-right: 25px;
+
 			a {
 				color: @gray-dark;
 				width: 100%;
@@ -132,6 +154,19 @@ p {
 					border-color: @brand-primary;
 					color: @white;
 				}
+
+				&.btn {
+					@media (max-width: @screen-xs-max) {
+						background: @gray-lighter;
+						padding: 20px;
+						width: 100%;
+
+						&:hover {
+							background: @brand-primary;
+							color: @white;
+						}
+					}
+				}
 			}
 		}
 	}
@@ -144,6 +179,10 @@ p {
 		position: absolute; 
 		left: 50%; 
 		bottom: 0%;
+
+		@media (max-width: @screen-xs-max) {
+			left: 46%;
+		}
 	}
 }
 	
@@ -177,6 +216,11 @@ p {
 			padding-top: 60px;
 			padding-bottom: 60px;
 
+			@media (max-width: @screen-xs-max) {
+				padding-bottom: 0px;
+			}
+
+
 			img {
 				.img-responsive; 
 				border-radius: 100%;
@@ -190,18 +234,27 @@ p {
 			padding-bottom: 30px;
 			.make-sm-column(8);
 			
+			@media (max-width: @screen-xs-max) {
+				padding-top: 0px;
+				text-align: center;
+			}
 			h3 {
 				.uppercase;
 				color: @brand-primary;
 				padding-top: 30px;
 				font-weight: 200;
 				padding: 20px 0;
+
+				@media (max-width: @screen-xs-max) {
+					padding: @grid-gutter-width 0;
+				}
 			}
 
 			p {
 				font-size: 16px;
 				line-height: 2;
-				padding-bottom: @grid-gutter-width;
+				padding-bottom: 10px;
+
 			}
 		} 
 		
@@ -210,12 +263,31 @@ p {
 	.skills-row {
 		.expert-column, .experience-column {
 			.make-sm-column(6);
-			 
+			@media (max-width: @screen-xs-max) {
+				padding-bottom: @grid-gutter-width;
+			}
+		}
+
+		.expert-column {
+			@media (max-width: @screen-xs-max) {
+				padding-top: @grid-gutter-width;
+			}
+		}
+
+		h4 {
+			@media (max-width: @screen-xs-max) {
+				text-align: center;
+			}
 		}
 
 		ul {
 			padding-left: 20px;  
 			line-height: 2;
+
+			@media (max-width: @screen-xs-max) {
+				list-style: none;
+				padding: 0;
+			}
 		}
 	}
 }
@@ -245,7 +317,6 @@ p {
 			.img-responsive;
 			padding-bottom: 10px;
 		}
-		
 	}
 }
 
@@ -267,6 +338,23 @@ p {
 		img {
 			.center-block;
 			.img-responsive;
+
+			@media (max-width: @screen-xs-max) {
+				margin-top: @grid-gutter-width*2;
+			}
+		}
+
+		@media (max-width: @screen-xs-max) {
+			padding: 0 40px;
+		}
+
+		.btn, .btn-dark {
+			@media (max-width: @screen-xs-max) {
+				.center-block;
+				padding: 30px; 
+				margin-top: 20px;
+				width: 100%;
+			}
 		}
 	}
 		 
