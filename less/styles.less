@@ -34,7 +34,7 @@ h2 {
 	.uppercase;
 	padding-top: @grid-gutter-width*2;
 	font-weight: 200; 
-}
+} 
 
 p {
 	line-height: 2; 
@@ -44,13 +44,17 @@ p {
 	font-family: @font-secondary;
 	color: @white;
 	letter-spacing: 3px;
-	width: 100%;
 	padding: 10px 20px;
 	border: solid 1px @white;
 	letter-spacing: 3px;
-	max-width: 250px;
 	margin: 10px;
 	.uppercase;
+	width: 200px;
+
+	@media (max-width: @screen-xs-max) {
+		max-width: 100%;
+		padding: 44px 0;
+	}
 
 	&:hover {
 		background: @black;
@@ -119,6 +123,7 @@ p {
 
 			@media (max-width: @screen-xs-max) {
 				padding-top: @grid-gutter-width;
+				font-size: 44px; 
 			}
 		}
 
@@ -129,6 +134,10 @@ p {
 			position: relative; 
 			z-index: 1;
 			padding-bottom: 20px;
+
+			@media (max-width: @screen-xs-max) {
+				font-size: 20px; 
+			}
 			span {
 				padding-bottom: 10px;
 			}
@@ -149,6 +158,10 @@ p {
 		li {
 			padding-left: 25px;
 			padding-right: 25px;
+
+			@media (max-width: @screen-xs-max) {
+				padding-left: 0;
+			}
 
 			a {
 				color: @gray-dark;
@@ -328,14 +341,7 @@ p {
 			padding-bottom: 10px;
 		}
 
-		&.southpacific {
-			.make-sm-column(6);
-			.make-sm-column-offset(3);
-			padding-bottom: 10px;
-			img {
-				padding: 20px;
-			}
-		}
+		
 	}
 }
 
