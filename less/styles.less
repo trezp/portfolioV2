@@ -336,12 +336,47 @@ p {
 		padding-top: @grid-gutter-width;
 		padding-bottom: @grid-gutter-width*2;
 		text-align: center;
+		position: relative;
+
+		
 		img {
 			.img-responsive;
 			padding-bottom: 10px;
 		}
 
-		
+		#floating-box {
+			background: @gray-dark;
+			padding: 10px @grid-gutter-width;
+			height: 100%;
+			width: 100%;
+			opacity: .9;
+			border-radius: 5px;
+			display: none;
+
+			h3 {
+				.uppercase;
+				color: lighten(@brand-primary, 20%);
+				font-weight: 200;
+			}
+			p {
+				color: @gray-lighter;
+
+				span {
+					display: block;
+					.uppercase; 
+					font-weight: 900;
+				}
+			}
+
+			a {
+				font-size: 20px;
+				color: lighten(@brand-primary, 20%);
+
+				&:hover {
+					color: @brand-primary;
+				}
+			}
+		}
 	}
 }
 
