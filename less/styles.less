@@ -325,11 +325,25 @@ p {
 
 .project-summ-container-fluid {
 	background-color: lighten(@gray-dark, 70%);
+
+	&.deployed-container {
+		background-color: @gray-dark;
+	}
 }
 
 .project-summary-row {
 	p, h2 {
 		color: @gray-dark;
+	}
+
+	&.deployed {
+		p {
+			color: @gray-lighter;
+		}
+
+		h2 {
+			color: lighten(@brand-primary, 10%);
+		}
 	}
 	.project-column {
 		.make-sm-column(6);
@@ -443,6 +457,14 @@ p {
 	color: @gray-dark;
 	padding-top: 60px;
 	padding-bottom: 60px;
+}
+
+.deployed {
+	background-color: @gray-dark;
+	.project-column {
+		.make-sm-column(4);
+
+	}
 }
 
 footer {
