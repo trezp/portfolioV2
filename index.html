@@ -6,12 +6,15 @@
 	<title>The Portfolio of Treasure Porth, Fullstack JavaScript Developer</title>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.js"></script>
 	<link href='http://fonts.googleapis.com/css?family=Oswald:400,700,300|Roboto:400,900,100' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/styles.css">
+
 </head>
-<body>
+<body ng-app="portfolioApp">
 	<div class="container-fluid pageone">
 	<div class="container">
 	<div class="header">
@@ -38,211 +41,13 @@
 
 	</div>
 	<main>
-	<div class="about-contain-fluid container-fluid">
-	<div class="about-container container">
-		<div class="about-row">
-			<div class="left">
-				<img src="images/colorheadshot.jpg" alt="Treasure Porth, Front End Engineer">
-				<ul class="social-media">
-					<li><a href="http://github.com/trezp"><i class="fa fa-github"></i></a></li>
-					<li><a href="https://www.linkedin.com/in/treasureporth"><i class="fa fa-linkedin"></i></a></li>
-					<li><a href="http://trezp.github.io/"><i class="fa fa-rss"></i></a></li>
-					<li><a href="mailto:treasure.porth@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
-				</ul>
-				<a href="resume.html" class="btn resume-button">View My Resume</a>
-			</div>
-			<div class="right">
-				<h3>Driven. Insightful. Meticulous.</h3>
-				<p>I'm a fullstack JavaScript developer.
-					I help run <a href="http://www.teamtreehouse.com/techdegrees">Treehouse's Techdegree programs.</a>
-					I'm happy as long as I have a problem to solve and something new to learn. I am passionate about traveling and
-					very good at karaoke. <a href="mailto:treasure.porth@gmail.com">Contact Now.</a></p>
-
-				<div class="skills-row">
-					<div class="expert-column">
-						<h4>very comfortable with:</h4>
-						<ul>
-							<li>Using my resourcefulness to solve virtually any coding task or problem </li>
-							<li>HTML/CSS</li>
-							<li>JavaScript/JQuery</li>
-							<li>Responsive web design</li>
-							<li>SASS/SCSS, Bootstrap with SASS</li>
-							<li>Bootstrap with LESS</li>
-							<li>Building/validating dynamic custom forms</li>
-							<li>Git and Github</li>
-						</ul>
-					</div>
-					<div class="experience-column">
-						<h4>know my way around:</h4>
-						<ul>
-							<li>Object-oriented JavaScript</li>
-							<li>Angular</li>
-							<li>Meteor.js</li>
-							<li>Node/Express</li>
-							<li>MongoDB</li>
-							<li>Django</li>
-						</ul>
-					</div>
-				</div>
-			</div>
+		<div id="main" ng-controller="mainController">
+			<a href="#/">About Me</a>
+			<a href="#/deployed">Deployed Systems</a>
+			<a href="#/websites">Websites</a>
+			<a href="#/personal-projects">Personal Projects</a>
+			<div ng-view></div>
 		</div>
-	</div>
-	</div>
-	<div class="project-summ-container-fluid deployed-container container-fluid">
-	<div class="project-summary-container container">
-		<div class="project-summary-row deployed">
-			<h2>// Professional Project: Deployed Systems</h2>
-			<p>At Cinder Solutions I was the sole front end developer on a project to create scalable, fully-customizable business management software. With the collaboration and guidance of my supervisor and the project's backend developer, I completely revamped the project's front end by giving the design a facelife and converting the entire project to SASS.</p>
-		<div class="deployed row">
-			<div class="project-column">
-				<a href="images/screenshots/deployednow/landing_calendarview.png">
-					<img src="images/screenshots/deployednow/landing_calendarview.png" class="project-thumbnail" alt="">
-				</a>
-			</div>
-			<div class="project-column">
-				<a href="images/screenshots/deployednow/landing_form.png">
-					<img src="images/screenshots/deployednow/landing_form.png" class="project-thumbnail" alt="">
-				</a>
-			</div>
-			<div class="project-column">
-				<a href="images/screenshots/deployednow/landing_weekview.png">
-					<img src="images/screenshots/deployednow/landing_weekview.png" class="project-thumbnail" alt="">
-				</a>
-			</div>
-		</div>
-	</div>
-	</div>
-	</div>
-	<div class="project-summ-container-fluid container-fluid">
-	<div class="project-summary-container container">
-		<div id="projects" class="project-summary-row">
-			<h2>// Professional Projects as Front End Dev at JAST Media</h2>
-			<p>Fully responsive websites built pixel-perfect from <strong>large-view mockups only</strong>.</p>
-		<div class="row">
-			<div class="project-column southpacific">
-				<a href="http://southpacificins.com">
-					<img src="images/screenshots/southpacific/southpacific.png" class="project-thumbnail" alt="">
-				</a>
-				<div id="floating-box">
-					<div class="floating-info-block">
-						<h3>South Pacific Insurance</h3>
-					<p><span>My contribution:</span> Entire website, including custom forms</p>
-					</div>
-					<div class="floating-info-block">
-						<a href="http://southpacificins.com">View live site</a>
-					</div>
-				</div>
-			</div>
-			<div class="project-column">
-				<a href="images/screenshots/johnnys/johnnys-lg.png">
-					<img src="images/thumbnails/johnnys.png" class="project-thumbnail" alt="">
-				</a>
-				<div id="floating-box">
-					<div class="floating-info-block">
-						<h3>Johnny's Lakeside RV Resort</h3>
-					<p><span>My contribution:</span> Entire website, including custom forms</p>
-					</div>
-					<div class="floating-info-block">
-						<a href="images/screenshots/johnnys/johnnys-lg.png">In production, view screenshot</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="project-column">
-				<a href="images/screenshots/terrafirma/terrafirma-lg.png">
-					<img src="images/thumbnails/terrafirma-tn.png"  class="project-thumbnail" alt="">
-				</a>
-				<div id="floating-box">
-					<div class="floating-info-block">
-						<h3>TerraFirma</h3>
-					<p><span>My contribution:</span> Entire website</p>
-					</div>
-					<div class="floating-info-block">
-						<a href="images/screenshots/terrafirma/terrafirma-lg.png">Screenshot(currently in production)</a>
-					</div>
-				</div>
-			</div>
-			<div class="project-column">
-				<a href="images/screenshots/shd/sandiego-hd-lg.png">
-					<img src="images/thumbnails/sandiegoharley-tn.png"  class="project-thumbnail" alt="">
-				</a>
-				<div id="floating-box">
-					<div class="floating-info-block">
-						<h3>San Diego Harley&reg;</h3>
-					<p><span>My contribution:</span> fully responsive front page</p>
-					</div>
-					<div class="floating-info-block">
-						<a href="http://southpacificins.com">Screenshot(currently in production)</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	</div>
-	</div>
-	<div class="projects-block">
-	<div class="project-contain-fluid container-fluid">
-	<div class="project-container container">
-		<div class="project-row row">
-			<h2>// Personal Projects</h2>
-			<div class="left project-column">
-				<a href="http://ticktickticket.meteor.com"><img src="images/tick.png"></a>
-			</div>
-			<div class="right project-column">
-				<h3 class="proj-h3">Ticktickticket</h3>
-				<p>Ticktickticket is a waitlist app built with JavaScript framework MeteorJS. Ticktickticket auto-refreshes in real-time and can be updated immediately by any student from any phone or browser. I built it while attending coding bootcamp, and it is still used in the classrooms of PDX Code Guild today.</p>
-				<a href="https://github.com/trezp/ticktickticket" class="btn btn-left">View the Code</a>
-				<a href="http://ticktickticket.meteor.com" class="btn btn-right">View the App</a>
-			</div>
-		</div>
-	</div>
-	</div>
-	<div class="project-contain-fluid container-fluid project2">
-	<div class="project-container container">
-		<div class="project-row row">
-			<div class="left project-column">
-				<h3 class="proj-h3">Beaverton Literacy Council Website</h3>
-				<p>The Beaverton Literacy Council serves parents of public school children who want to improve their English speaking skills. The site is accessed primarily by children translating for their parents, and so was designed and built for simplicity and ease of use. Built using Zurb Foundation, JQuery, and JQuery UI. Basic graphics for the site are from freepik but heavily altered by me.</p>
-				<a class="btn-dark" href="https://github.com/trezp/literacycouncil" class="btn btn-left">View the Code</a>
-				<a class="btn-dark" href="http://blc.treasureporth.com" class="btn btn-right">See the Site</a>
-			</div>
-			<div class="right project-column">
-				<img src="images/blc.png">
-			</div>
-		</div>
-	</div>
-	</div>
-	<div class="project-contain-fluid container-fluid project3">
-	<div class="project-container container ">
-		<div class="project-row row">
-			<div class="left project-column">
-				<img src="images/ly.png">
-			</div>
-			<div class="right project-column">
-				<h3 class="proj-h3">Light Years</h3>
-				<p>Light Years, based on the classic French card game Milles Bornes, was my first foray into Object Oriented JavaScript and MeteorJS. It is still very much in development, but the code demonstrates my knowledge of more advanced programming concepts and my ability to work with JavaScript frameworks.  </p>
-				<a href="https://github.com/trezp/lightyears-m" class="btn btn-left">View the Code</a>
-				<a href="http://lightyears.meteor.com" class="btn btn-right">See the Prototype</a>
-			</div>
-		</div>
-	</div>
-	</div>
-	<div class="project-contain-fluid container-fluid project4">
-	<div class="project-container container ">
-		<div class="project-row row">
-			<div class="left project-column">
-				<h3 class="proj-h3">This very website!</h3>
-				<p>This fully responsive website was built from scratch using LESS and Bootstrap's fluid grid system. Check out <a href="http://old.treasureporth.com">the personal website I built while I was in code school</a> to see how dramatically my skills improved after just 3 months.</p>
-				<a class="btn-dark" href="https://github.com/trezp/personal-site-2.0" class="btn btn-left">View the Code</a>
-			</div>
-			<div class="right project-column">
-				<img src="images/portfolioV2.png">
-			</div>
-		</div>
-	</div>
-	</div>
-	</div>
 	</main>
 	<footer class="container-fluid">
 		<div class="footer-container">
@@ -266,5 +71,6 @@
 	</footer>
 	</div>
 <script src="js/scripts.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>
