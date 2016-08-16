@@ -10,11 +10,21 @@ body {
 }
 
 main {
-	background-color: @gray-lighter;
 
-  #main {
-    background-color: @gray-dark;
-  }
+	.main-nav {
+		height: 46px;
+		li {
+			width: 19%;
+			display: inline-block;
+			line-height: 46px;
+
+			a {
+				text-transform: uppercase;
+				text-align: center;
+				padding: 10px;
+			}
+		}
+	}
 }
 
 a {
@@ -99,6 +109,7 @@ p {
 	position: relative;
 	background-position: center center;
 	height: 100vh;
+	display: block;
 	.img-responsive;
 	.vertical-center;
 }

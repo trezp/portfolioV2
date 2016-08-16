@@ -3,19 +3,31 @@ var app = angular.module('portfolioApp', ['ngRoute']);
 app.config(function($routeProvider){
   $routeProvider
     .when('/', {
-      templateUrl: 'routes/about.html',
+      templateUrl: 'templates/home.html',
+      controller : 'mainController'
+    })
+    .when('/resume', {
+      templateUrl: 'resume.html',
+      controller : 'mainController'
+    })
+    .when('/projects', {
+      templateUrl: 'projects.html',
+      controller : 'mainController'
+    })
+    .when('/about', {
+      templateUrl: 'templates/about.html',
       controller : 'mainController'
     })
     .when('/personal-projects', {
-      templateUrl: 'routes/personalproj.html',
+      templateUrl: 'templates/personalproj.html',
       controller : 'mainController'
     })
     .when('/websites', {
-      templateUrl: 'routes/websites.html',
+      templateUrl: 'templates/websites.html',
       controller : 'mainController'
     })
     .when('/deployed', {
-      templateUrl: 'routes/deployed.html',
+      templateUrl: 'templates/deployed.html',
       controller : 'mainController'
     });
 });
