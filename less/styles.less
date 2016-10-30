@@ -47,7 +47,6 @@ a {
 h2 {
 	color: @gray-dark;
 	.uppercase;
-	padding-top: @grid-gutter-width*2;
 	font-weight: 200;
 }
 
@@ -343,12 +342,21 @@ p {
 	background-color: lighten(@gray-dark, 70%);
 
 	&.deployed-container {
-		background-color: @gray-dark;
+		background-color: darken(@gray-dark, 5%);
+
+		h2, p {
+			color: lighten(@gray-dark, 60%);
+		}
+	}
+
+	.project-summary-container {
+		padding-bottom: @grid-gutter-width*2;
+
 	}
 }
 
 .project-summary-row {
-	p, h2 {
+	p, h2, .website-header {
 		color: @gray-dark;
 	}
 
@@ -362,12 +370,12 @@ p {
 		}
 	}
 	.project-column {
-		.make-sm-column(6);
-		padding-top: @grid-gutter-width;
-		padding-bottom: @grid-gutter-width*2;
+		.make-sm-column(4);
+		padding: @grid-gutter-width;
 		text-align: center;
 		position: relative;
-
+		max-height: 275px;
+		overflow: hidden;
 
 		img {
 			.img-responsive;
@@ -419,6 +427,16 @@ p {
 		color: @gray-lighter;
 		padding-top: 0;
 	}
+
+	&.other-projects {
+		padding: @grid-gutter-width*2 0;
+		background-color: darken(@gray-dark, 5%);
+		a {
+			&:hover {
+				color: @gray-lighter;
+			}
+		}
+	}
 	.project-column {
 		.make-sm-column(6);
 		padding-top: 60px;
@@ -432,7 +450,6 @@ p {
 				margin-top: @grid-gutter-width*2;
 			}
 		}
-
 		@media (max-width: @screen-xs-max) {
 			padding: 0 40px;
 		}
@@ -459,28 +476,12 @@ p {
 .project2 {
 	background-color: @gray-lighter;
 	color: @gray-dark;
-	padding-top: 60px;
-	padding-bottom: 60px;
 }
 
-.project3 {
-	padding-top: 60px;
-	padding-bottom: 60px;
-}
 
 .project4 {
 	background-color: @gray-lighter;
 	color: @gray-dark;
-	padding-top: 60px;
-	padding-bottom: 60px;
-}
-
-.deployed {
-	background-color: @gray-dark;
-	.project-column {
-		.make-sm-column(4);
-
-	}
 }
 
 footer {
