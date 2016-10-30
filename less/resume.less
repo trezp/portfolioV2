@@ -1,33 +1,27 @@
 
-@import "bootstrap-less/mixins.less";
-@import "bootstrap-less/bootstrap.less";
-@import "bootstrap-less/variables.less";
-@import "bootstrap-less/grid.less";
-@import "styles.less"; 
-
-.resume {  
+.resume {
 	color: @gray-dark;
 	background: @gray-lighter;
 	.container;
-	 
+
 	@media (max-width: @screen-xs-max) {
 		h2 {
-			a { 
+			a {
 				display: block;
 				width: 100%;
 				padding: 20px ;
 				color: @brand-primary;
-				margin-bottom: 10px; 
+				margin-bottom: 10px;
 
 				&:hover {
 					color: @gray-dark;
-				} 
-			}	
+				}
+			}
 		}
 	}
 	.resume-body {
 		padding: @grid-gutter-width*2;
-		
+
 		@media (max-width: @screen-xs-max) {
 			padding: 0;
 		}
@@ -42,7 +36,7 @@
 		}
 
 	}
-	
+
 	h3 {
 		font-weight: 900;
 		padding: 10px 0;
@@ -63,8 +57,8 @@
 	.job-title {
 		.uppercase;
 		color: @brand-primary;
-		font-size: 20px; 
-		font-weight: 900; 
+		font-size: 20px;
+		font-weight: 900;
 		line-height: 1;
 	}
 
@@ -87,4 +81,4 @@
 			padding-bottom: 10px;
 		}
 	}
-} 
+}
